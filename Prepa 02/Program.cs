@@ -23,9 +23,13 @@ namespace Prepa_02
                         Console.WriteLine($"Mi valor en x es: {my_punto.GetX()}\nMi valor en y es: {my_punto.GetY()}");
                         Console.WriteLine("Mi valor en x es: {0}\nMi valor en y es: {1}", my_punto_2.GetX(), my_punto_2.GetY());
             */
+
             Vector my_vector = new Vector(0,0,4,3);
             Vector my_vector_2 = new Vector(0,0,4,3);
+
             Vector my_vector_3 = my_vector + my_vector_2;
+            my_vector += my_vector_2;
+
 
             Console.WriteLine($"Mi magnitud es de: {my_vector_3.get_magnitud()}");
             Console.ReadLine();
