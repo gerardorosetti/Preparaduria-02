@@ -50,9 +50,16 @@ namespace Prepa_02
             calcular_magnitud();
         }
 
-        public static Vector operator +(Vector original, Vector sumando)
+        public static Vector operator +(Vector sumando1, Vector sumando2)
         {
-            return new Vector(original.origen.GetX() + sumando.origen.GetX(), original.origen.GetY() + sumando.origen.GetY(), original.fin.GetX() + sumando.fin.GetX(), original.fin.GetY() + sumando.fin.GetY());
+            Punto nuevo_origen = new Punto(sumando1.origen.GetX() + sumando2.origen.GetX(),
+                                           sumando1.origen.GetY() + sumando2.origen.GetY());
+
+            Punto nuevo_fin = new Punto(sumando1.fin.GetX() + sumando2.fin.GetX(),
+                                        sumando1.fin.GetY() + sumando2.fin.GetY());
+
+
+            return new Vector(nuevo_origen, nuevo_fin);
         }
     }
 }
